@@ -10,3 +10,14 @@ function getPageList() {
 }
 
 getPageList();
+
+$("button").click(() => {
+    $.post("./api/createNewPage.php", {
+        "name": $("input").val()
+    }, () => {
+        getPageList();
+    })
+        .fail(() => {
+            alert("Страница уже существует!");
+        })
+});
