@@ -28,7 +28,7 @@
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-postcss": "^9.0.1",
-    "gulp-sass": "^4.1.1",
+    "gss": "^4.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "webpack": "^4.41.2",
