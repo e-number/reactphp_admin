@@ -1,10 +1,10 @@
 export default class DOMHelper {
-    parseStrToDOM(str) {
+    static parseStrToDOM(str) {
         const parser = new DOMParser();
         return parser.parseFromString(str, "text/html");
     }
 
-    wrapTextNodes(dom) {
+    static wrapTextNodes(dom) {
         const body = dom.body;
         let textNodes = [];
 
@@ -31,12 +31,12 @@ export default class DOMHelper {
         return dom;
     }
 
-    serializeDOMToString(dom) {
+    static serializeDOMToString(dom) {
         const serializer = new XMLSerializer();
         return serializer.serializeToString(dom);
     }
 
-    unwrapTextNodes(dom) {
+    static unwrapTextNodes(dom) {
         dom.body.querySelectorAll("text-editor").forEach(element => {
             element.parentNode.replaceChild(element.firstChild, element);
         });
